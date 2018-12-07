@@ -1,2 +1,3 @@
 # active-link
-Highlight active links  
+
+Tiny js library to highlight active page link in webpage

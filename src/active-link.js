@@ -13,4 +13,3 @@ let highlight = ({tag = 'a', activeClass = 'active', container = null,}) => {
         }
     }
 };
-
