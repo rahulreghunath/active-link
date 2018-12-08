@@ -28,7 +28,7 @@ highlight({options})
 | Name      | Required | Type          | Default     | Description |
 | ---       | ---      | ---           | ---         | ---         |
 | activeClass | false  | String | active | Class to added to active link element |
-| container | true  | String | none| Element's name, id or class in which contain the links to be highlighted. Element must be unique |
+| container | true  | String | none| Element's name, #id or .class in which contain the links to be highlighted. Element must be unique |
 
 ---
 
