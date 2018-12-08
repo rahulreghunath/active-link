@@ -11,7 +11,7 @@
 Include the script in the bottom of the body
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/rahulreghunath/active-link/dist/active-link.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/rahulreghunath/active-link@latest/dist/active-link.min.js"></script>
 ```
 ---
 ### How to use
