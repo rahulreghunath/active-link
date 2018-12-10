@@ -1,12 +1,13 @@
 /**
  * Highlight the current links with given properties
- * @param {string} [activeClass = active]
+ * @param {string} [activeClass = active] - class to be added to active element
  * @param {string} container - element,id or class of containing element
  * @param {boolean} [highlightParent = false] - if want to highlight parent element
+ * @param {int} [parentLevels = 1] - if want to go more level upper from the link element to add active class
  */
-let highlight = ({activeClass = 'active', container, highlightParent = false}) => {
+let highlight = ({activeClass = 'active', container, highlightParent = false, parentLevels = 1}) => {
 
-    let links;
+    let links, element;
 
     /**
      * Throw error if container element not given
@@ -22,6 +23,7 @@ let highlight = ({activeClass = 'active', container, highlightParent = false}) =
      */
     for (const key of links) {
 
+        element = key;
         /**
          * If current page url
          */
@@ -31,9 +33,17 @@ let highlight = ({activeClass = 'active', container, highlightParent = false}) =
              * If highlight parent element
              */
             if (highlightParent) {
-                key.parentElement.setAttribute('class', activeClass);
+
+                /**
+                 * to travel up from the link(a) element
+                 */
+                for (i = 0; i < parentLevels; i++) {
+                    element = element.parentElement;
+                }
+
+                element.classList.add(activeClass)
             } else {
-                key.setAttribute('class', activeClass);
+                key.classList.add(activeClass)
             }
         }
     }

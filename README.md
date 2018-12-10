@@ -30,6 +30,7 @@ highlight({options})
 | activeClass | false  | String | active | Class to added to active link element |
 | container | true  | String | none| Element's name, #id or .class in which contain the links to be highlighted. Element must be unique. |
 | highlightParent | false  | Boolean | false | To highlight parent element of link |
+| parentLevels | false  | Integer | 1 | If want to go more level upper from the link(a) element to add active class. Accepts only ``highlightParent = true`` |
 
 ---
 
